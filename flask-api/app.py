@@ -1,16 +1,18 @@
 import requests
 import json
 from flask import Flask
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
     
 # Bitly API key
 api_key = "7b54a242ece91b73eb0897a7bbafadfd60dba21f"
 
 # Long URL
-url = "https://stackoverflow.com/"
+url = "https://google.com/"
 
 #Define short_url function
-@app.route('/')
+@app.route('/short_url')
 def short_url():
 
 # Set API Key for Bitly
@@ -23,25 +25,13 @@ def short_url():
     response = requests.post('https://api-ssl.bitly.com/v4/shorten', headers=headers, data=data)
 
 # Format response as json
-    response_json = (response.json())
 
-# Filter json response     
-    response_json_filterd = print(response_json['link'])
+    response_output = response.text
 
-# Convert filtered json response to string
-    url_string = print(str(response_json_filterd))
+    json_loads = json.loads(response_output)
 
-    return short_url()
+    output = json_loads['link']
+
+    return {'result' : f"{output}"}
+
     
-# Define main function
-# def new():
-
-# # Call short_url function
-#     return short_url(url_string=())
-
-# def main():
-    
-#     return new()
-
-if __name__ == "__main__":
-    app.run()
