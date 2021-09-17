@@ -1,47 +1,40 @@
 import requests
 import json
-from flask import Flask
-app = Flask(__name__)
+import requests
     
 # Bitly API key
 api_key = "7b54a242ece91b73eb0897a7bbafadfd60dba21f"
 
 # Long URL
-url = "https://stackoverflow.com/"
+url = input("Please enter a long URL: ")
+url_prefix = "http"
 
-#Define short_url function
-@app.route('/')
-def short_url():
+#request = requests.get(url)
 
-# Set API Key for Bitly
+def short_url(url):
+     # Set API Key for Bitly
     headers={'Authorization': f"{api_key}" }
 
-# Set url input
+    # Set url input
     data = '{ "long_url": "'f"{url}"'" }'
 
-# Request short url response
+    # Request short url response
     response = requests.post('https://api-ssl.bitly.com/v4/shorten', headers=headers, data=data)
 
-# Format response as json
-    response_json = (response.json())
+    # Format response as json
+    shorl_url = (response.json()['link'])
 
-# Filter json response     
-    response_json_filterd = print(response_json['link'])
+    print(f"The short URL is:\n{shorl_url}") 
 
-# Convert filtered json response to string
-    url_string = print(str(response_json_filterd))
+def main():
+    if url_prefix in url:
+        return short_url(url)
+    else:
+        return short_url(f"{url_prefix}" + "://" + url)
+main()
 
-    return short_url()
-    
-# Define main function
-# def new():
-
-# # Call short_url function
-#     return short_url(url_string=())
-
-# def main():
-    
-#     return new()
-
-if __name__ == "__main__":
-    app.run()
+# To Do: 
+# 1. Check if URL format is correct (Contains http// or https:// as prefix)
+# 2. If URL format is incorrect, update url with http:// or https:// prefix
+# 3. If URL format is correct, check if URL is reachable with status code 200
+# 4. If URL format is correct and URL returns status code 200, generate short URL.
