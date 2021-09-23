@@ -22,7 +22,7 @@ def form():
 def short_url():
         url = request.form['shortenurl']
     #try:
-        with app.test_request_context():
+        with app.app_context():
             
             # Set API Key for Bitly.
             headers={'Authorization': f"{api_key}" }
