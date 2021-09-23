@@ -9,21 +9,19 @@ api_key = "7b54a242ece91b73eb0897a7bbafadfd60dba21f"
 def form():
     return render_template('form.html')
 
-# User input long URL.
-#url = input("Please enter a long URL: ")
-
 # Validate user input URL.
-# def validate_url():
-#     check_url = requests.get(url)
-#     return check_url.status_code
+def validate_url():
+    check_url = requests.get(request.form['shortenurl'])
+    return check_url.status_code
 
 # Generate short URL with Bitly.
 @app.route('/', methods=["POST"])
 def short_url():
-        url = request.form['shortenurl']
-    #try:
-        with app.app_context():
-            
+    with app.app_context():
+        if validate_url() == 200:
+            # Get URL from form as user input
+            url = request.form['shortenurl']
+                
             # Set API Key for Bitly.
             headers={'Authorization': f"{api_key}" }
             
@@ -38,10 +36,14 @@ def short_url():
 
             # Return the short URL.
             return f"The short URL is:\n{short_url_json}"
-    # If domain missing from URL, throw error.
-    # except KeyError:
-    #     return 'Invalid URL. Possibly no domain was provided. Please check the URL.' 
 
+
+
+
+
+
+
+                
 # Main
 # @app.route('/', methods = ['POST', 'GET'])
 # def main():
