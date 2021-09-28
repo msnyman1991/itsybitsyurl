@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+  </head> {% block body %} <body>  
+    <div class=container style="background-color: white;border: rgba(0, 0, 0, 0.125);border: 1px solid ;padding: 20px;">
+    <img style="display: block;margin: auto;" src="static/styles/ninja-face.png" alt="Flying Kites" width="150" height="150">
+    <h1 style="text-align:center">Here Is Your URL!</h1>
+    <h2 style="text-align:center"> {% for line in result %} {{ line }} {% endfor %} </h2>
+    </div>
+  </body> {% endblock %}
+  <meta charset="UTF-8">

@@ -216,11 +216,6 @@ input[type="checkbox"]:checked + label span::after {
 
 /** PERSON */
 figure {
-  --skinH: 30;
-  --skinS: 100%;
-  --skinL: 87%;
-  --hair: rgb(180,70,60);
-  background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%);
   border: 1px solid rgba(0,0,0,0.0625);
   border-radius: 50%;
   height: 0;

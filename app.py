@@ -1,5 +1,10 @@
 import requests
 from flask import Flask,render_template,request
+import flask
+import time
+
+from jinja2 import Environment
+from jinja2.loaders import FileSystemLoader
 
 app = Flask(__name__)
 # # Bitly API key.
@@ -35,15 +40,12 @@ def short_url():
             short_url_json = (response.json()['link'])
 
             # Return the short URL.
-            return f"The short URL is:\n{short_url_json}"
+            #return f"The short URL is:\n{short_url_json}"
+            env = Environment(loader=FileSystemLoader('templates'))
+            tmpl = env.get_template('shortenurl.html')
+            return flask.Response(tmpl.generate(result=short_url_json))
 
 
-
-
-
-
-
-                
 # Main
 # @app.route('/', methods = ['POST', 'GET'])
 # def main():
