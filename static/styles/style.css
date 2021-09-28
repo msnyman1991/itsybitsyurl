@@ -38,7 +38,7 @@ form {
   overflow: hidden;
 }
 
-form .email, form .email a {
+form .url, form .url a {
   color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
   font-size: 0.825rem;
   order: 4;
@@ -64,13 +64,22 @@ form > div {
   order: 2;
 }
 
+img.ninja-peek {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 25px;
+}
+
+div.url{
+  background-color: white;border: rgba(0, 0, 0, 0.125);
+  border: 1px solid;
+  padding: 20px;
+}
+
 label {
   display: flex;
   flex-direction: column;
-}
-
-.label-show-password {
-  order: 3;
 }
 
 label > span {
@@ -97,9 +106,6 @@ label input::placeholder {
   color: var(--borderDark);
 }
 
-/* trick from https://css-tricks.com/snippets/css/password-input-bullet-alternatives/ */
-
-
 label:hover span {
   color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
@@ -108,16 +114,6 @@ label input.text:focus,
 label input.text:active {
   border-color:  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
   box-shadow: 0 1px  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
-}
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
 }
 
 input.text:focus + span,
@@ -151,7 +147,6 @@ input[type="submit"] {
   padding-left: 0;
 }
 
-input[type="checkbox"]:focus + label span::before,
 input[type="submit"]:focus {
   outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
   outline-offset: 2px;
@@ -170,33 +165,6 @@ input[type="submit"]:active {
   transition: all 0.125s;
 }
 
-/** Checkbox styling */
-.a11y-hidden {
-  position: absolute;
-  top: -1000em;
-  left: -1000em;
-}
-
-input[type="checkbox"] + label span {
-  padding-left: 1.25rem;
-  position: relative;
-}
-
-input[type="checkbox"] + label span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 1px solid var(--borderDark);
-  border-radius: var(--borderRadius);
-  transition: all 0.25s;
-  outline:1px dashed transparent;
-  outline-offset: 2px;
-}
-
 input[type="checkbox"]:checked + label span::after {
   content: "";
   display: block;
@@ -213,7 +181,7 @@ input[type="checkbox"]:checked + label span::after {
   background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
 
-/** PERSON */
+/** NINJA FACE */
 figure {
   border: 1px solid rgba(0,0,0,0.0625);
   border-radius: 50%;
@@ -230,11 +198,6 @@ figure {
 figure div {
   position: absolute;
   transform: translate(-50%, -50%);
-}
-
-figure .skin {
-  background: hsl(var(--skinH), var(--skinS), var(--skinL));
-  box-shadow: inset 0 0 3rem hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.95));
 }
 
 figure .head {

@@ -1,4 +1,4 @@
-function myFunction() {
+function CopyURL() {
   /* Get the text field */
   var copyText = document.getElementById("myInput");
 

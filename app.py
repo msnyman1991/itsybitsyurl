@@ -42,12 +42,13 @@ def short_url():
                 short_url_json = (response.json()['link'])
 
                 # Return the short URL.
-                #return f"The short URL is:\n{short_url_json}"
                 env = Environment(loader=FileSystemLoader('templates'))
                 tmpl = env.get_template('shortenurl.html')
                 return flask.Response(tmpl.generate(result=short_url_json))
             else:
+                # Throw error if no conditions are met
                 return "ERROR"
+                # Direct to error page if URL cant be validated.
         except requests.exceptions.ConnectionError:
                 env = Environment(loader=FileSystemLoader('templates'))
                 tmpl_err = env.get_template('error.html')
