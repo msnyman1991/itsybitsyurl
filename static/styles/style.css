@@ -98,27 +98,26 @@ label input::placeholder {
 }
 
 /* trick from https://css-tricks.com/snippets/css/password-input-bullet-alternatives/ */
-label input[name="password"] {
-  -webkit-text-security: disc;
-}
 
-input[name="show-password"]:checked ~ div label input[name="password"] {
-  -webkit-text-security: none;
-}
 
 label:hover span {
   color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
-}
-
-input[type="checkbox"] + div label:hover span::before,
-label:hover input.text {
-  border-color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
 
 label input.text:focus,
 label input.text:active {
   border-color:  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
   box-shadow: 0 1px  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 input.text:focus + span,
@@ -251,22 +250,4 @@ figure .head .eyes {
   top: 55%;
   left: 50%;
   white-space: nowrap;
-}
-
-@-webkit-keyframes blink {
-  0%, 90%, 100% {
-    height: 10px;
-  }
-  95% {
-    height: 0;
-  }
-}
-
-@keyframes blink {
-  0%, 90%, 100% {
-    height: 10px;
-  }
-  95% {
-    height: 0px;
-  }
 }

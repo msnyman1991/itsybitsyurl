@@ -2,11 +2,22 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="static/styles/style.css">
-  </head> {% block body %} <body>  
-    <div class=container style="background-color: white;border: rgba(0, 0, 0, 0.125);border: 1px solid ;padding: 20px;">
-    <img style="display: block;margin: auto;" src="static/styles/ninja-face.png" alt="Flying Kites" width="150" height="150">
-    <h1 style="text-align:center">Here Is Your URL!</h1>
-    <h2 style="text-align:center"> {% for line in result %} {{ line }} {% endfor %} </h2>
+    <script type="text/javascript" src="static/styles/script.js"></script>
+  </head> {% block body %} <body> 
+  <div class=container >
+    <div >
+      <img style="display: block;margin: auto;position: relative;top: 25px;" src="static/styles/ninja-peeking.png" alt="Flying Kites" width="200" height="140">
     </div>
+    <div style="background-color: white;border: rgba(0, 0, 0, 0.125);border: 1px solid ;padding: 20px;">
+      <h1 style="text-align:center">Here is your short URL!</h1>
+      <h2 style="text-align:center"><input style="font-size: 24px;" value="{{result}}" id="myInput" type="text"></h2>
+      <h3 style="text-align:center"><button onclick="myFunction()">Copy URL</button></h3>
+      <h3 style="text-align:center"><a href="" >HOME</a></h3>
+    </div>
+  </div>
+    
+    
+ 
+
   </body> {% endblock %}
   <meta charset="UTF-8">
