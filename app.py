@@ -7,7 +7,7 @@ from jinja2.loaders import FileSystemLoader
 
 app = Flask(__name__)
 # # Bitly API key.
-api_key = "7b54a242ece91b73eb0897a7bbafadfd60dba21f"
+api_key = ""
 
 @app.route('/')
 def form():
