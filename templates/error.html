@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">ItsyBitsyURL_</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+      </div>
+    </nav>
+  </header>
   <head>
     <link rel="stylesheet" type="text/css" href="static/styles/style.css">
-  </head> {% block body %} <body> 
-
-  <div class=container >
-
-    <div class=container style="background-color: white;border: rgba(0, 0, 0, 0.125);border: 1px solid ;padding: 20px;">
-      <h2 style="text-align:center">Cannot validate the URL. Please check the URL and try again.</h2>
-      <h3 style="text-align:center"><a href="" >HOME</a></h3>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body> 
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <h2 style="text-align:center;color: white;">Cannot validate the URL. Please check the URL and try again.</h2>
+          <p style="text-align:center">
+            <a href="" style="color: white;" class="btn btn-primary" type="button">Try again</a>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div >
-    <img style="display: block;margin: auto;position: relative;top: 80px; right: 8px;" src="static/styles/ninja-hang.png" alt="Flying Kites" width="200" height="250">
-  </div>
-  </body> {% endblock %}
+  </body>
   <meta charset="UTF-8">
+
+
+  

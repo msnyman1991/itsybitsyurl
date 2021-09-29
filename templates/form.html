@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+ <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ItsyBitsyURL_</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+       
+    </div>
+  </nav>
+</header>
   <head>
     <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <form method="POST">
-    <h1 style="text-align:center">Qinja URL</h1>
-    <h2 style="text-align:center">The URL shortener</h2>
-    <div>
-      <label class="label-url">
-        <input pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="https://example.com" type="url" class="text" name="shortenurl" tabindex="1" required />
-        <span class="required">Long URL</span>
-      </label>
-    </div>
-    <input type="submit" value="Generate short URL" />
-    <ninja aria-hidden="true">
-      <div class="head skin">
-        <div class="eyes">
-          <img src="static/styles/ninja-face.png" width="150" height="200">
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 mx-auto">
+    
+        <form method="POST">
+    
+          <div class="input-group mb-3">
+            <input class="form-control" aria-describedby="basic-addon2" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="https://example.com" type="url" class="text" name="shortenurl" tabindex="1" required>
+          <div class="input-group-append">
+            <input class="btn btn-success" type="submit" value="Create URL">
+          </div>
+      </form>
       </div>
-    </ninja>
-  </form>
+      <p style="font-style: italic; text-align:left;color:white;background-color: transparent; border-color: red;padding: .375rem .0rem;"  type="text">
+        Enter a URL to shorten.
+      </p>
+    </div>
+  </div>
+
+

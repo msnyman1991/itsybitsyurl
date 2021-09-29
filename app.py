@@ -2,10 +2,8 @@ import requests
 from flask import Flask,render_template,request
 import flask
 import time
-
 from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
-from requests.exceptions import RetryError
 
 app = Flask(__name__)
 # # Bitly API key.

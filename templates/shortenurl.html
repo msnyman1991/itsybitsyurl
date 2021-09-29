@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">ItsyBitsyURL_</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+         
+      </div>
+    </nav>
+  </header>
   <head>
     <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="static/styles/script.js"></script>
   </head> {% block body %} <body>
-    <div class=container>
-      <div>
-        <img class="ninja-peek" src="static/styles/ninja-peeking.png" width="200" height="140">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <div class="input-group mb-3">
+            <input value="{{result}}" id="myInput" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button onclick="CopyURL()" onmouseout="outFunc()" class="btn btn-success" type="button">
+                  <span class="tooltiptext" id="myTooltip">Copy URL</span>
+                </button>
+              </div>
+            </div>
+            <p style="text-align:right">
+              <a href="" style="color: white;" class="btn btn-primary" type="button">New URL!</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="url">
-        <h1 style="text-align:center">Here is your short URL!</h1>
-        <h2 style="text-align:center">
-          <input style="font-size: 24px;" value="{{result}}" id="myInput" type="text">
-        </h2>
-        <h3 style="text-align:center">
-          <button onclick="CopyURL()">Copy URL</button>
-        </h3>
-        <h3 style="text-align:center">
-          <a href="">HOME</a>
-        </h3>
-      </div>
-    </div>
   </body> {% endblock %}
   <meta charset="UTF-8">
