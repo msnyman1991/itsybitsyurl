@@ -27,6 +27,7 @@ The default brach is the developement branch. The main branch is used as the pro
 Several quick start options are available:
 
 - Clone the repo: `git clone https://github.com/msnyman1991/itsybitsyurl.git`
+- Run the app with Flask. Vist the<a href="https://flask.palletsprojects.com/en/2.0.x/cli/">Flask documentation</a> for instructions.
 
 Read the Bitly <a href="https://dev.bitly.com/">documentation</a> page for setup of Authentication for the Bilty API.
 
