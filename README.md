@@ -7,12 +7,12 @@
 <h3 align="center">ItsyBitsyURL_</h3>
 
 <p align="center">
-  A URL shortner built with the Bitly <a href="https://dev.bitly.com/">API</a>. 
+  A URL shortener built with the Bitly <a href="https://dev.bitly.com/">API</a>. 
 </p>
 
 ## ItsyBitsyURL_
 
-The default brach is the developement branch. The main branch is used as the production branch.
+The default branch is the developement branch. The main branch is used as the production branch.
 
 ## Table of contents
 
