@@ -15,7 +15,7 @@ def form():
 
 # Validate user input URL.
 def validate_url():
-    check_url = requests.get(request.form['shortenurl'])
+    check_url = requests.get(request.form['shortenurl'], allow_redirects=False)
     return check_url.status_code
 
 # Generate short URL with Bitly.
@@ -23,7 +23,7 @@ def validate_url():
 def short_url():
     with app.app_context():
         try:
-            if validate_url() == 200:
+            if validate_url() == 200 or validate_url() == 301:
                 # Get URL from form as user input
                 url = request.form['shortenurl']
                     
