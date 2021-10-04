@@ -5,7 +5,7 @@ from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
 
 app = Flask(__name__)
-# # Bitly API key.
+# Bitly API key.
 api_key = ""
 
 @app.route('/')
