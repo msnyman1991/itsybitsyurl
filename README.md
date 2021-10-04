@@ -14,8 +14,6 @@
 
 The default branch is the developement branch. The main branch is used as the production branch.
 
-<!-- ![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true") -->
-
 <p class="aligncenter">
     <img src="https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true"" alt="centered image" />
 </p>
@@ -52,6 +50,7 @@ itsybitsyurl/
 │   ├── styles/
 |       |── script.js
 |       |── style.css
+|       |── example.gif
 └── templates/
     ├── error.html
     ├── form.html
