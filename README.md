@@ -31,12 +31,12 @@ The default branch is the developement branch. The main branch is used as the pr
 Several quick start options are available:
 
 - Clone the repo: `git clone https://github.com/msnyman1991/itsybitsyurl.git`
-- Run the app with Flask. Vist the <a href="https://flask.palletsprojects.com/en/2.0.x/cli/">Flask documentation</a> page for instructions.
+- Run the application with Flask. Vist the <a href="https://flask.palletsprojects.com/en/2.0.x/cli/">Flask documentation</a> page for instructions.
 
 Read the Bitly <a href="https://dev.bitly.com/">documentation</a> page for setup of Authentication for the Bilty API.
 
 ## Status
-Look at coverting the APP away from using Bitly and creating self custom made shortened URLs.
+Look at coverting the application away from using Bitly and creating self custom made shortened URLs.
 
 ## What's included
 
