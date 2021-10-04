@@ -13,8 +13,9 @@
 ## ItsyBitsyURL_
 
 The default branch is the developement branch. The main branch is used as the production branch.
-
-![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true")
+<p align="center">
+  ![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true")
+</p>
 
 ## Table of contents
 
