@@ -14,6 +14,8 @@
 
 The default branch is the developement branch. The main branch is used as the production branch.
 
+![alt-text](static/styles/example.gif")
+
 ## Table of contents
 
 - [Quick start](#quick-start)
