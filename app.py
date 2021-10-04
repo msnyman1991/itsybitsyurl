@@ -1,11 +1,12 @@
 import requests
+import flask
 from flask import Flask,render_template,request
 from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
 
 app = Flask(__name__)
 # # Bitly API key.
-api_key = ""
+api_key = "7b54a242ece91b73eb0897a7bbafadfd60dba21f"
 
 @app.route('/')
 def form():
@@ -40,7 +41,7 @@ def short_url():
                 # Return the short URL.
                 env = Environment(loader=FileSystemLoader('templates'))
                 tmpl = env.get_template('shortenurl.html')
-                return Flask.Response(tmpl.generate(result=short_url_json))
+                return flask.Response(tmpl.generate(result=short_url_json))
             else:
                 # Throw error if no conditions are met
                 return "ERROR"
@@ -48,4 +49,4 @@ def short_url():
         except requests.exceptions.ConnectionError:
                 env = Environment(loader=FileSystemLoader('templates'))
                 tmpl_err = env.get_template('error.html')
-                return Flask.Response(tmpl_err.generate(result="error"))
+                return flask.Response(tmpl_err.generate(result="error"))
