@@ -13,8 +13,11 @@
 ## ItsyBitsyURL_
 
 The default branch is the developement branch. The main branch is used as the production branch.
-<p align="center">
-  ![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true")
+
+<!-- ![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true") -->
+
+<p class="aligncenter">
+    <img src="https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true"" alt="centered image" />
 </p>
 
 ## Table of contents
