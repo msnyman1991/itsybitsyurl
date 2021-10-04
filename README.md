@@ -14,7 +14,7 @@
 
 The default branch is the developement branch. The main branch is used as the production branch.
 
-![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif")
+![alt-text](https://github.com/msnyman1991/itsybitsyurl/blob/main/static/styles/example.gif?raw=true")
 
 ## Table of contents
 
