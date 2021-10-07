@@ -54,3 +54,10 @@ nav.navbar
    top: 0px;
    width: 100%;
 }
+
+div.col-sm-6.mx-auto{
+  background: white;
+  padding: 60px 20px 0px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgb(0 0 0 / 25%);
+}
